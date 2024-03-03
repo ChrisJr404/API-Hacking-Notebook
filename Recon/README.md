@@ -2,21 +2,21 @@
 API Recon is a crucial initial step in API penetration testing aimed at uncovering the API attack surface of a target. The process is divided into passive and active techniques, focusing on identifying how an API can be found and utilized based on its intended use—ranging from public, partner, to private APIs.
 
 # Types of APIs Based on Accessibility
-*** 1. Public APIs
+## 1. Public APIs
 Accessibility: Meant to be easily found and used by end-users.
 Authentication: May not require authentication if only public information is handled. Otherwise, authentication is typically needed.
 Documentation: Providers share documentation that is user-friendly and easily accessible.
-# 2. Partner APIs
+## 2. Partner APIs
 Accessibility: Intended for use exclusively by partners of the provider and might be harder to locate without partnership status.
 Documentation: Documented, though often limited to partners.
-# 3. Private APIs
+## 3. Private APIs
 Accessibility: Used within an organization, generally not intended for external use.
 Documentation: Less documented than partner APIs, if documented at all.
 
 # API Recon Techniques
-# Passive Recon
+## Passive Recon
 Objective: Discover APIs and their documentation without engaging the target system directly.
-# Active Recon
+## Active Recon
 Involves direct interaction with the target to discover APIs.
 
 # Web API Indicators
