@@ -1,11 +1,11 @@
-# Objectives of Passive Reconnaissance
+# Objectives of Passive Recon
 - Identify API endpoints.
 - Discover exposed credentials and sensitive information.
 - Collect information on API versions and documentation.
 - Understand the API’s purpose and potential business logic flaws.
 - Find API keys, JSON Web Tokens (JWT), and other secrets.
 
-# Techniques and Tools for Passive Reconnaissance
+# Techniques and Tools for Passive Recon
 ## 1. Google Dorking
 Google Dorking leverages specific search queries to find information that is not easily visible through regular search attempts.
 
