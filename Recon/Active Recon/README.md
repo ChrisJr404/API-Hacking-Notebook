@@ -7,12 +7,13 @@ Active reconnaissance in API penetration testing involves directly interacting w
 - Uncovering API-Related Directories: By scanning web applications, researchers can discover directories related to APIs.
 - Building Out the Target's API Attack Surface: The ultimate goal is to piecemeal together a comprehensive overview of the target's API ecosystem to identify potential vulnerabilities.
 
-# Tools and Commands for Active Reconnaissance
+# Techniques and Tools for Active Reconnaissance
 A variety of tools are employed during active reconnaissance, each serving specific functions, from scanning ports to enumerating services and discovering API endpoints.
 
 ## Nmap
 Nmap is a versatile tool for discovering services and vulnerabilities on a network.
 
+### Nmap Commands
 This command employs default scripts (`-sC`) and service enumeration (`-sV`) against the target, saving the output in three formats for later analysis.
 ```
 nmap -sC -sV [target address or network range] -oA nameofoutput
@@ -29,6 +30,7 @@ nmap -sV --script=http-enum <target> -p 80,443,8000,8080
 ## OWASP Amass
 OWASP Amass gathers information about a target’s external network and services using Open Source Intelligence (OSINT).
 
+### OWASP Amass Commands
 Before using Amass, enhance its capabilities with API keys. This command fetches a sample `config.ini` file. Then, obtain and add API keys to this file to improve the tool’s scanning efficiency.
 ```
 sudo curl https://raw.githubusercontent.com/OWASP/Amass/master/examples/config.ini > ~/.config/amass/config.ini
@@ -61,6 +63,7 @@ amass enum -active -brute -w /usr/share/wordlists/API_superlist -d [target domai
 ## Gobuster
 Gobuster is a command-line tool for brute-forcing URIs and DNS subdomains using wordlists.
 
+### Gobuster Commands
 This scan will discover API directories by brute-forcing paths from a wordlist.
 ```
 gobuster dir -u target-name.com:8000 -w /home/hapihacker/api/wordlists/common_apis_160
@@ -69,6 +72,7 @@ gobuster dir -u target-name.com:8000 -w /home/hapihacker/api/wordlists/common_ap
 ## Kiterunner
 Kiterunner offers a novel approach to discovering API endpoints by simulating complex API request patterns beyond the customary HTTP GET requests.
 
+### Kiterunner Commands
 This command allows Kiterunner to attempt common API request types and paths, identifying potential API endpoints.
 ```
 kr scan HTTP://127.0.0.1 -w ~/api/wordlists/data/kiterunner/routes-large.kite
