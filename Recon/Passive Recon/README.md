@@ -11,25 +11,25 @@ Google Dorking leverages specific search queries to find information that is not
 
 ### Google Dorking Queries
 Finds WordPress user directories.
-'''
+```
 inurl:"/wp-json/wp/v2/users"
-'''
+```
 Locates API key files.
-'''
+```
 intitle:"index.of" intext:"api.txt"
-'''
+```
 Unveils API directories.
-'''
+```
 inurl:"/api/v1" intext:"index of /"
-'''
+```
 Searches for sites with a potential XenAPI SQL injection vulnerability.
-'''
+```
 ext:php inurl:"api.php?action="
-'''
+```
 Lists potentially exposed API keys.
-'''
+```
 intitle:"index of" api_key OR "api key" OR apiKey -pool
-'''
+```
 
 ## 2. Git Dorking
 Searching GitHub and other repository hosting services for sensitive information disclosure.
@@ -44,9 +44,9 @@ A tool for automatically discovering exposed secrets in git repositories.
 
 ### Using TruffleHog
 This command initiates a scan of the specified organization's GitHub repositories for secrets.
-'''
+```
 sudo docker run -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=target-name
-'''
+```
 
 ## 4. API Directories
 Platforms like ProgrammableWeb (https://www.programmableweb.com/apis/directory) provide extensive data on APIs.
@@ -60,21 +60,21 @@ Shodan is instrumental in discovering internet-facing APIs and devices.
 
 ### Useful Shodan Queries
 Basic search for a target’s domain name.
-'''
+```
 hostname:"targetname.com"
-'''
+```
 Filters results to those responding with JSON or XML.
-'''
+```
 "content-type: application/json" and "content-type: application/xml"
-'''
+```
 Limits results to those with successful responses.
-'''
+```
 "200 OK"
-'''
+```
 Searches for web applications using the WordPress API.
-'''
+```
 "wp-json"
-'''
+```
 
 ## 6. The Wayback Machine
 The Wayback Machine is valuable for examining historical versions of a target’s API or web presence.
