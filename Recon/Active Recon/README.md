@@ -10,7 +10,7 @@ Active reconnaissance in API penetration testing involves directly interacting w
 # Techniques and Tools for Active Reconnaissance
 A variety of tools are employed during active reconnaissance, each serving specific functions, from scanning ports to enumerating services and discovering API endpoints.
 
-## Nmap
+## 1. Nmap
 Nmap is a versatile tool for discovering services and vulnerabilities on a network.
 
 ### Nmap Commands
@@ -27,7 +27,7 @@ Uses the NSE script `http-enum` to enumerate web services on standard HTTP and H
 nmap -sV --script=http-enum <target> -p 80,443,8000,8080
 ```
 
-## OWASP Amass
+## 2. OWASP Amass
 OWASP Amass gathers information about a target’s external network and services using Open Source Intelligence (OSINT).
 
 ### OWASP Amass Commands
@@ -60,7 +60,7 @@ Add the -brute option to brute-force subdomains, -w to specify the API_superlist
 amass enum -active -brute -w /usr/share/wordlists/API_superlist -d [target domain] -dir [directory name]  
 ```
 
-## Gobuster
+## 3. Gobuster
 Gobuster is a command-line tool for brute-forcing URIs and DNS subdomains using wordlists.
 
 ### Gobuster Commands
@@ -69,7 +69,7 @@ This scan will discover API directories by brute-forcing paths from a wordlist.
 gobuster dir -u target-name.com:8000 -w /home/hapihacker/api/wordlists/common_apis_160
 ```
 
-## Kiterunner
+## 4. Kiterunner
 Kiterunner offers a novel approach to discovering API endpoints by simulating complex API request patterns beyond the customary HTTP GET requests.
 
 ### Kiterunner Commands
