@@ -1,4 +1,4 @@
-# 2) Creating API Documentation When There Is None (Reverse Engineering)
+# Reverse Engineering API Documentation
 This section provides a systematic approach to reverse engineer an API when documentation or specification files are unavailable. It introduces manual and automatic methods to build your collection of API requests, aiding in the discovery of potential vulnerabilities and attack surfaces.
 
 # Manual Request Collection with Postman
